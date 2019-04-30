@@ -1,6 +1,6 @@
 # require libraries/modules here
 require 'nokogiri'
-require 'pry'
+#require 'pry'
 
 def create_project_hash
   html = File.read('fixtures/kickstarter.html')
@@ -15,12 +15,7 @@ def create_project_hash
     :description => project.css("p.bbcard_blurb").text,
     :location => project.css("span.location-name").text,
     :percent_funded => project.css("li.first.funded").text.gsub("%","").to_i
-
   }
   end
   projects
-  #binding.pry
 end
-
-
-create_project_hash
