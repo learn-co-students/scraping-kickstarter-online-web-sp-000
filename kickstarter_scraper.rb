@@ -1,5 +1,4 @@
 require "nokogiri"
-#require_relative '/Project' 
 require 'pry'
 
 # def get_page 
@@ -27,5 +26,4 @@ kickstarter.css("li.project.grid_4").each do |project|
   end
   projects 
 end
-
 
